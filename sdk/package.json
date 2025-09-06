@@ -1,0 +1,40 @@
+{
+  "name": "aocaptcha",
+  "version": "0.1.0",
+  "description": "A CAPTCHA protocol built on AO",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "@permaweb/aoconnect": "^0.0.85",
+    "solid-js": "^1.9.7",
+    "ramda": "^0.31.3"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-solid": "^2.11.6"
+  },
+  "keywords": [
+    "solidjs",
+    "component",
+    "npm",
+    "ui"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    
+  }
+}
