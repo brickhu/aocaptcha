@@ -1,0 +1,20 @@
+{
+  "name": "ao-captcha",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/brickhu/aocaptcha#readme",
+  "bugs": {
+    "url": "https://github.com/brickhu/aocaptcha/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brickhu/aocaptcha.git"
+  },
+  "license": "ISC",
+  "author": "fei",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "checkin": "aos SP22OUJOsSHVxHQEt3swog79gncGT8M-ehre7qzc68s"
+  }
+}
