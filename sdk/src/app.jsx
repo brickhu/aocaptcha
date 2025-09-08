@@ -2,7 +2,7 @@
 
 
 import { Portal } from "solid-js/web";
-import { onMount,createSignal, Switch, Match, batch, For,createMemo,onCleanup,createEffect } from "solid-js"
+import { onMount,createSignal, Switch, Match, batch, For,createMemo,onCleanup } from "solid-js"
 import css from "./app.module.css"
 import Spinner from "./components/spinner"
 import Countdown from "./components/countdown"
