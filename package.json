@@ -15,6 +15,6 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "checkin": "aos SP22OUJOsSHVxHQEt3swog79gncGT8M-ehre7qzc68s"
+    "captcha": "aos SP22OUJOsSHVxHQEt3swog79gncGT8M-ehre7qzc68s"
   }
 }
