@@ -101,7 +101,7 @@ Handlers.add("Request",{
       tags[tagName] = tagValue
     end
   end
-
+  
   Requests[msg.Id] = {
     id = msg.Id,
     code = num_str,
@@ -149,8 +149,7 @@ Handlers.add("Verify",{
   for k,v in pairs(Requests[rid]) do
     request[k] = v
   end
-  print(request)
-  
+
   if msg.Timestamp - request.timestamp <= Options.expire_duration and msg.Data == request.code and msg.From == request.from then
     if not Usage then Usage = {} end
     Usage.forwards = (Usage.forwards or 0) + 1
@@ -176,6 +175,8 @@ Handlers.add("Verify",{
     Send(message)
     -- Send({Target=request.recipient,Action="Test"})
     Requests[rid] = nil
+  else
+    print("发送验证失败")
   end
   
 end)

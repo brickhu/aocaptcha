@@ -8,20 +8,23 @@ import { AoCaptcha } from 'aocaptcha-sdk';
 function App() {
   const { connected, address, connecting, showConnector,wallet } = useWallet()
 
+   const captcha = new AoCaptcha("1SGjGa3T3l2mq7W81UGaBf26SX61No3YxTOaesUhCCc")
+
   const testAocaptcha = async()=>{
     // console.log(DEFAULT_HYPERBEAM_NODE_URL,HI,HB)
-    const captcha = new AoCaptcha("SP22OUJOsSHVxHQEt3swog79gncGT8M-ehre7qzc68s")
-    console.log("captcha : ",captcha)
+     
 
-    const request = await captcha.request({
+      const request = await captcha.request({
           Recipient : "nHUF1zKzb7c_wZEFr4W1reBPxKP_PkrH4wVU2nZA-Bw",
           ['Request-Type'] : "Checkin",
           ['X-Note'] :"hhahaa",
           ['X-Color']:"#dddddd"
         },wallet())
-        if(!request){throw("request failed")}
-        console.log('request: ', request);
-  }
+      if(!request){throw("request failed")}
+      const verify = await captcha.verify(request,wallet()).then((r)=>r).catch((e)=>console.log(e))
+      console.log('verify: ', verify);
+    }
+
 
   return (
     <>
